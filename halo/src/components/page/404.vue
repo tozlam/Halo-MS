@@ -3,6 +3,6 @@
 </template>
 <script>
   export default {
-    data:()=>({meg:'login'})
+    data:()=>({meg:'404'})
   }
 </script>
