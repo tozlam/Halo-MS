@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/halo-store.iml" filepath="$PROJECT_DIR$/halo-store.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Halo-MS.iml" filepath="$PROJECT_DIR$/Halo-MS.iml" />
     </modules>
   </component>
 </project>

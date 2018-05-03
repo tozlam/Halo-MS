@@ -4,6 +4,6 @@
     <option name="languageLevel" value="ES6" />
   </component>
   <component name="ProjectRootManager">
-    <output url="file://$PROJECT_DIR$/../halo-store/out" />
+    <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
