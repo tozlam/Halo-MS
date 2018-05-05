@@ -26,7 +26,7 @@ module.exports = {
       },
       {
         test: /\.(eot|svg|ttf|woff|woff2)\w*/,
-        loader: 'file-loader?publicPath=/static/res/&outputPath=font/'
+        loader: 'file-loader'
       },
       {
         test: /\.js$/,

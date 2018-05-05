@@ -10,7 +10,7 @@ Vue.use(ElementUI, { size: 'small' });
 Vue.prototype.$axios = axios;
 
 router.beforeEach((to,from,next)=>{
-  const role=localStorage.getItem("ms_username");
+  const role=localStorage.getItem("ms_userId");
   if(!role&&to.path!=='/login'){
     next({ path: '/login' });
   }

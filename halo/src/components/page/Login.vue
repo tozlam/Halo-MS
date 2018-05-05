@@ -12,7 +12,7 @@
                 <el-input v-model="loginForm.userId" placeholder="Halo. 员工ID"></el-input>
               </el-form-item>
               <el-form-item prop="password">
-                <el-input placeholder="密码" type="password" v-model="loginForm.password"></el-input>
+                <el-input placeholder="密码" type="password" v-model="loginForm.password" @keyup.enter.native="submitForm('loginForm')"></el-input>
               </el-form-item>
               <el-checkbox>记住密码</el-checkbox>
               <el-form-item>
@@ -48,7 +48,7 @@
       submitForm(form) {
         this.$refs[form].validate((valid) => {
           if (valid) {
-            localStorage.setItem('ms_username',this.loginForm.userId);
+            localStorage.setItem('ms_userId',this.loginForm.userId);
             this.$router.push({path: '/'});
           } else {
             console.log('error submit!!');
