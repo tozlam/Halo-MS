@@ -18,16 +18,15 @@ export default new Router({
         component: resolve => require(['../components/page/DashBoard.vue'], resolve),
         meta: { title: '系统首页' }
       }
-
       ]
     },
     {
       path:'/login',
-      components:resolve => require(['../components/page/Login.vue'],resolve)
+      component: resolve => require(['../components/page/Login.vue'], resolve),
     },
     {
       path:'/404',
-      components:resolve => require(['../components/page/404.vue'],resolve)
+      component: resolve => require(['../components/page/404.vue'], resolve),
     },
     {
       path:'*',
