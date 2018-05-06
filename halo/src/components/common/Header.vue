@@ -24,13 +24,13 @@
 </template>
 <script>
   export default {
-    data:()=>({
-        username:'header',
-        fullscreen:false,
+    data: () => ({
+      username: 'header',
+      fullscreen: false,
     }),
-    methods:{
+    methods: {
       //全屏操作
-      handleFullScreen(){
+      handleFullScreen() {
         let element = document.documentElement;
         if (this.fullscreen) {
           if (document.exitFullscreen) {
@@ -58,7 +58,7 @@
       },
       // 用户名下拉菜单选择事件
       handleCommand(command) {
-        if(command == 'loginout'){
+        if (command == 'loginout') {
           localStorage.removeItem('ms_userId');
           this.$router.push('/login');
         }
@@ -68,7 +68,7 @@
   }
 </script>
 <style>
-  .header{
+  .header {
     position: relative;
     width: 100%;
     height: 70px;
@@ -76,43 +76,50 @@
     color: #fff;
     background-color: #242f42;
   }
-  .header_logo img{
+
+  .header_logo img {
     width: 120px;
     height: 24px;
   }
-  .header_logo{
+
+  .header_logo {
     float: left;
     line-height: 70px;
-    margin-left: 15px;
+    margin-left: 25px;
   }
-  .el-icon-rank{
+
+  .el-icon-rank {
     font-size: 24px;
     transform: rotate(45deg);
     padding-top: 2px;
   }
-  .el-dropdown-link{
-    font-size:18px;
+
+  .el-dropdown-link {
+    font-size: 18px;
     color: #fff;
     cursor: pointer;
   }
-  .header_right{
+
+  .header_right {
     float: right;
     margin-right: 50px;
 
   }
-  .header_right_container{
+
+  .header_right_container {
     display: flex;
     align-items: center;
     height: 70px;
     width: 200px;
     justify-content: space-between;
   }
-.header_right_btnFullscreen{
-  position: relative;
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  border-radius: 15px;
-  cursor: pointer;
-}
+
+  .header_right_btnFullscreen {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+  }
 </style>

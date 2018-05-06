@@ -48,8 +48,24 @@
       submitForm(form) {
         this.$refs[form].validate((valid) => {
           if (valid) {
-            localStorage.setItem('ms_userId',this.loginForm.userId);
-            this.$router.push({path: '/'});
+              // this.$axios({
+              //   url:"http://123.207.121.122:8888/message/list",
+              // dataType:"jsonp"},{},{
+              //   headers: {
+              //     "Content-Type": "application/json;charset=utf-8"
+              //   },
+              //   withCredentials : true
+              // } ).then((res)=>{
+              //   if(res.data.id==='null'){
+                  localStorage.setItem('ms_userId',this.loginForm.userId);
+                  this.$router.push({path: '/'});
+                // }else {
+                //   console.log('error json!!');
+                //   return false;
+                // }
+            // } )
+
+
           } else {
             console.log('error submit!!');
             return false;
