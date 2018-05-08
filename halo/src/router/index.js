@@ -18,7 +18,12 @@ export default new Router({
         path: '/dashboard',
         component: resolve => require(['../components/page/DashBoard.vue'], resolve),
         meta: { title: '系统首页' }
-      }
+      },
+        {
+          path: '/ordermanage',
+          component: resolve => require(['../components/page/OrderManage.vue'], resolve),
+          meta: { title: '订单管理' }
+        },
       ]
     },
     {
@@ -26,12 +31,12 @@ export default new Router({
       component: resolve => require(['../components/page/Login.vue'], resolve),
     },
     {
-      path:'/404',
-      component: resolve => require(['../components/page/404.vue'], resolve),
+      path: '/404',
+      component: resolve => require(['../components/page/404.vue'], resolve)
     },
     {
-      path:'*',
-      redirect:'/404'
+      path: '*',
+      redirect: '/404'
     }
   ]
 })

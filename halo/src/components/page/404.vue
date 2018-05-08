@@ -1,27 +1,37 @@
 <template>
-  <div class="wrapper">
-    <v-head></v-head>
-    <v-sidebar></v-sidebar>
-    <div class="content-box" >
-      <v-tags></v-tags>
-      <div class="content">
-        <keep-alive>
-          <router-view></router-view>
-        </keep-alive>
-      </div>
-    </div>
+  <div class="errorPage">
+    <button @click="back">Go Back</button>
   </div>
 </template>
-<script>
-  import vHead from '../common/Header.vue';
-  import vSidebar from '../common/Sidebar.vue';
-  import vTags from '../common/Tags.vue';
-  import bus from '../common/bus';
+<style type="text/css">
+  .errorPage {
+    width: 100%;
+    height: 100%;
+    background: url("../../../static/img/404page.jpg");
+    background-position: center;
+    overflow: hidden;
+  }
 
+  button {
+    width: 150px;
+    height: 50px;
+    border: 3px solid #fff;
+    position: relative;
+    background-color: transparent;
+    left: 43.5%;
+    top: 76%;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+  }
+</style>
+<script>
   export default {
-    data:()=>({meg:'Home'}),
-    components:{
-      vHead, vSidebar, vTags
-    },
+    methods: {
+      back() {
+        this.$router.go(-1);
+      }
+    }
   }
 </script>
+

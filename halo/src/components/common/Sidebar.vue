@@ -21,7 +21,7 @@
 </template>
 
   <div class="collapse-btn" @click="collapseChange">
-  <el-tooltip :content="collapse?`展开`:`缩小`" placement="right">
+  <el-tooltip :content="collapse?`展开`:`收起`" placement="right">
     <i class="el-icon-menu"></i>
   </el-tooltip>
 </div>
@@ -45,8 +45,8 @@
           },
           {
             icon: 'el-icon-tickets',
-            index: 'table',
-            title: '基础表格'
+            index: 'ordermanage',
+            title: '订单管理'
           },
           {
             icon: 'el-icon-message',
@@ -102,6 +102,7 @@
     methods:{
       collapseChange(){
         this.collapse=!this.collapse;
+        bus.$emit('collapse',this.collapse);
       }
     },
     computed:{
@@ -128,9 +129,9 @@
   .collapse-btn{
     color: white;
     cursor: pointer;
-    font-size: 24px;
-    position: absolute;
-    left: 21px;
+    font-size: 20px;
+    position: fixed;
+    left: 20px;
     bottom: 20px;
   }
 </style>
