@@ -4,10 +4,10 @@
     <div class="month">
       <ul>
         <!--点击会触发pickpre函数，重新刷新当前日期 @click(vue v-on:click缩写) -->
-        <li class="arrow" @click="pickPre(currentYear,currentMonth)">❮</li>
-        <li class="year-month" @click="pickYear(currentYear,currentMonth)">
-          <span class="choose-year">{{ currentYear }}</span>
-          <span class="choose-month">{{ currentMonth }}月</span>
+        <li class="arrow" @click="pickPre(currentYear,currentMonth)">❮&nbsp;</li>
+        <li class="year-month">
+          <p class="choose-month">{{ currentMonth }}月</p>
+          <p class="choose-year">{{ currentYear }}</p>
         </li>
         <li class="arrow" @click="pickNext(currentYear,currentMonth)">❯</li>
       </ul>
@@ -113,9 +113,7 @@
         d.setDate(35);
         that.initData(that.formatDate(d.getFullYear(), d.getMonth() + 1, 1));
       },
-      pickYear: function (year, month) {
 
-      },
       // 返回 类似 2016-01-02 格式的字符串
       formatDate: function (year, month, day) {
         let y = year;
@@ -133,45 +131,42 @@
   #calender{
     width:31%;
     box-sizing: border-box;
-    border: 2px solid #A4A7B0;
+    border: 0.5px solid #A4A7B0;
     height: 335px;
-    margin-left: 0.5%;
     background-color: rgb(50,65,87);
+    border-radius: 4px;
+    float: right;
   }
   .month {
     width: 92%;
     height: 48px;
-    border: 2px solid #FFFFFF;
+    /*border: 2px solid #FFFFFF;*/
     display: flex;
     justify-content: center;
     margin: auto ;
-    margin-top: 20px;
+    margin-top: 15px;
 
   }
 
   .month ul {
-    margin: 0;
-    padding: 0;
     display: flex;
     margin-top: 11px;
     justify-content: space-between;
   }
 
   .year-month {
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    padding-left: 10px;
   }
 
   .choose-year {
     padding: 0 20px;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 200;
   }
 
   .choose-month {
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 200;
   }
 
@@ -181,7 +176,7 @@
     cursor: pointer;
   }
   .month ul li {
-    color: #999;
+    color: #909399;
     font-size: 20px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -191,12 +186,13 @@
   .weekdays {
     margin: auto;
     color: #FFFFFF;
-    background: #A4A7B0;
-    width: 96.6%;
-    margin-top: 26px;
+    background: #909399;
+    width: 100%;
+    margin-top: 20px;
     height: 34px;
     line-height: 34px;
-
+    display: flex;
+    justify-content: space-around;
   }
 
   .weekdays li {
@@ -205,7 +201,6 @@
     color: #e9eaec;
     font-size: 14px;
     font-weight: 100;
-    width: 12.9%;
   }
 
   .days {
@@ -221,7 +216,7 @@
     text-align: center;
     padding-bottom: 3px;
     padding-top: 7px;
-    color: rgb(14, 220, 235);
+    color: #409EFF;;
     font-weight: 200;
   }
 
@@ -233,7 +228,7 @@
   }
 
   .days li .other-month {
-    color: #84a8ae;
+    color: #909399;
     height: 29px;
     width: 27px;
     line-height: 29px;

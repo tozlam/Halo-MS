@@ -1,9 +1,11 @@
 <template>
   <div class="dashboard">
-    <v-calender></v-calender>
+    <div class="calenderCard">
+      <v-calender></v-calender>
+    </div>
     <el-row>
-      <el-col :span="8">
-        <el-card shadow="hover">
+      <el-col>
+        <el-card shadow="hover" class="ls">
           {{meg}}
         </el-card>
       </el-col>
@@ -21,4 +23,12 @@
     },
   }
 </script>
+<style>
+  .calenderCard{
+    overflow: hidden;
+  }
+  .ls{
+    width: 30%;
+  }
+</style>
 
