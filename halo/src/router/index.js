@@ -14,7 +14,8 @@ export default new Router({
       path: '/',
       component: resolve => require(['../components/common/Home.vue'], resolve),
       meta: { title: '自述页面' },
-      children: [{
+      children: [
+        {
         path: '/dashboard',
         component: resolve => require(['../components/page/DashBoard.vue'], resolve),
         meta: { title: '系统首页' }
@@ -23,6 +24,16 @@ export default new Router({
           path: '/ordermanage',
           component: resolve => require(['../components/page/OrderManage.vue'], resolve),
           meta: { title: '订单管理' }
+        },
+        {
+          path: '/goodsmanage',
+          component: resolve => require(['../components/page/GoodsManage.vue'], resolve),
+          meta: { title: '商品管理' }
+        },
+        {
+          path: '/usermanage',
+          component: resolve => require(['../components/page/UserManage.vue'], resolve),
+          meta: { title: '用户管理' }
         },
       ]
     },

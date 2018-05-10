@@ -1,34 +1,148 @@
 <template>
-  <div class="dashboard">
-    <div class="calenderCard">
+  <div class="dashboard clear">
+    <div class="calenderCard clear">
       <v-calender></v-calender>
     </div>
-    <el-row>
-      <el-col>
-        <el-card shadow="hover" class="ls">
-          {{meg}}
-        </el-card>
-      </el-col>
-    </el-row>
+    <div class="statusCard clear">
+      <el-row :gutter="10" class="clear">
+        <el-col :span="6">
+          <el-card shadow="hover">
+            <i class="el-icon-sold-out" @click="goRouter('ordermanage')"></i>
+            <div class="card-info" @click="goRouter('ordermanage')">
+              <p>{{totalOrder}}</p>
+              <p>总订单数</p>
+            </div>
+
+          </el-card>
+        </el-col>
+        <el-col :span="6">
+          <el-card shadow="hover" :class="alertCard(this.pendingOrder)?'cardInfo-danger':'el-card'">
+            <i class="el-icon-bell" @click="goRouter('ordermanage')"></i>
+            <div class="card-info" @click="goRouter('ordermanage')">
+              <p>{{pendingOrder}}</p>
+              <p>待处理订单</p>
+            </div>
+
+          </el-card>
+        </el-col>
+        <el-col :span="6">
+          <el-card shadow="hover" :class="alertCard(this.unstockedGoods)?'cardInfo-warning':'el-card'">
+            <i class="el-icon-circle-close-outline" @click="goRouter('goodsmanage')"></i>
+            <div class="card-info" @click="goRouter('goodsmanage')">
+              <p>{{unstockedGoods}}</p>
+              <p>无库存商品</p>
+            </div>
+
+          </el-card>
+        </el-col>
+        <el-col :span="6">
+          <el-card shadow="hover" :class="alertCard(this.dealTotalMoney)?'cardInfo-success':'el-card'">
+            <i class="el-icon-tickets" @click="goRouter('ordermanage')"></i>
+            <div class="card-info" @click="goRouter('ordermanage')">
+              <p>{{dealTotalMoney}}</p>
+              <p>成交总额</p>
+            </div>
+
+          </el-card>
+        </el-col>
+      </el-row>
+    </div>
+    <!--<div class="schartCard clear">-->
+      <!--<v-schart></v-schart>-->
+    <!--</div>-->
 
   </div>
 </template>
 <script>
   import vCalender from './calendar.vue';
+  import vSchart from './schart';
 
   export default {
-    data: () => ({meg: 'dash'}),
-    components:{
-      vCalender
+    data: () => ({
+      totalOrder: 1,
+      pendingOrder: 1,
+      unstockedGoods: 1,
+      dealTotalMoney: 1,
+    }),
+    components: {
+      vCalender, vSchart
     },
+    methods: {
+      alertCard(that) {
+        if (that > 0) {
+          return true;
+        }
+        return false;
+      },
+      goRouter(that) {
+        this.$router.push({path: "/" + that});
+      }
+    },
+    computed: {}
   }
 </script>
 <style>
-  .calenderCard{
+  .clear::after {
+    content: "";
+    height: 0;
+    clear: both;
+  }
+
+  .schartCard {
+    float:left;
+    margin-top: 10px;
+  }
+
+  .statusCard {
+    float: left;
+    width: 68%;
+  }
+
+  .el-card {
     overflow: hidden;
+    cursor: pointer;
   }
-  .ls{
-    width: 30%;
+
+  .el-card i {
+    font-size: 32px;
+    padding-top: 5px;
+    float: left;
   }
+
+  .el-card {
+    background-color: #409EFF;
+    color: #fff;
+  }
+
+  .cardInfo-warning {
+    background-color: #E6A23C;
+    color: #fff;
+  }
+
+  .cardInfo-danger {
+    background-color: #F56C6C;
+    color: #fff;
+  }
+
+  .cardInfo-success {
+    background-color: #67C23A;
+    color: #fff;
+  }
+
+  #F56C6C
+  .el-card .card-info {
+    float: left;
+    margin-bottom: 20px;
+    padding-left: 10%;
+  }
+
+  .card-info p:nth-child(1) {
+    font-size: 24px;
+  }
+
+  .card-info p:nth-child(2) {
+    font-size: 12px;
+  }
+
 </style>
 

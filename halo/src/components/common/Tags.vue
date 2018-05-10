@@ -5,7 +5,7 @@
         <router-link :to="item.path" class="tags-li-title">
           {{item.title}}
         </router-link>
-        <span class="tags-li-close" ><i class="el-icon-close"></i> </span>
+        <span class="tags-li-close" @click="closeTags(index)" ><i class="el-icon-close"></i> </span>
       </li>
     </ul>
   </div>
@@ -28,7 +28,17 @@
           title: route.meta.title,
           path: route.path
         })
-      }
+      },
+      // 关闭单个标签
+      closeTags(index) {
+        const delItem = this.tagsList.splice(index, 1)[0];
+        const item = this.tagsList[index] ? this.tagsList[index] : this.tagsList[index - 1];
+        if (item) {
+          delItem.path === this.$route.path && this.$router.push(item.path);
+        }else{
+          this.$router.push('/');
+        }
+      },
     },
     computed:{
       showTags(){
