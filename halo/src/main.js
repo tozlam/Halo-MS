@@ -9,7 +9,7 @@ import 'element-ui/lib/theme-chalk/index.css';
 Vue.use(ElementUI, { size: 'small' });
 Vue.prototype.$axios = axios;
 axios.defaults.withCredentials=true;
-Vue.prototype.$rootUrl = '/list';
+Vue.prototype.$rootUrl = '/proxy';
 
 router.beforeEach((to,from,next)=>{
   const role=localStorage.getItem("ms_userId");

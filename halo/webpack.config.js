@@ -53,16 +53,16 @@ module.exports = {
     historyApiFallback: true,
     noInfo: true,
     overlay: true,
-    port:8880,
-    proxy:{
-      '/list':{
-        target:'http://123.207.121.122:8888',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/list': '/message'
-        }
-      }
-    }
+    port:8888,
+    // proxy:{
+    //   '/proxy':{
+    //     target:'http://115.159.53.208:8080',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/proxy': '/message/list'
+    //     }
+    //   }
+    // }
   },
   performance: {
     hints: false

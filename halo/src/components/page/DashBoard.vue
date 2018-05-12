@@ -47,15 +47,17 @@
         </el-col>
       </el-row>
     </div>
-    <!--<div class="schartCard clear">-->
-      <!--<v-schart></v-schart>-->
-    <!--</div>-->
+    <div class="schartCard clear">
+      <v-schart></v-schart>
+      <v-schart2></v-schart2>
+    </div>
 
   </div>
 </template>
 <script>
   import vCalender from './calendar.vue';
   import vSchart from './schart';
+  import vSchart2 from './schart2';
 
   export default {
     data: () => ({
@@ -65,7 +67,7 @@
       dealTotalMoney: 1,
     }),
     components: {
-      vCalender, vSchart
+      vCalender, vSchart2, vSchart
     },
     methods: {
       alertCard(that) {
@@ -82,6 +84,9 @@
   }
 </script>
 <style>
+  .dashboard{
+    overflow: hidden;
+  }
   .clear::after {
     content: "";
     height: 0;
@@ -89,8 +94,14 @@
   }
 
   .schartCard {
-    float:left;
+    float: left;
     margin-top: 10px;
+    width: 68%;
+    height: 20%;
+    background-color: #A4A7B0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
   }
 
   .statusCard {

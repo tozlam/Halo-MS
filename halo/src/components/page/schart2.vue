@@ -1,5 +1,5 @@
 <template>
-  <div id="schart">
+  <div id="schart2">
     <schart class="schart-wrapper" :canvasId="canvasId" :type="type" :data="data" :options="options"></schart>
   </div>
 </template>
@@ -8,21 +8,19 @@
   export default {
     data(){
       return{
-        canvasId:'HaloSchart',
-        type:'ring',
+        canvasId:'Schart',
+        type:'bar',
         data:[
-          {name: '魅族', value: 1342},
-          {name: '魅蓝', value: 2123},
+          {name: '05-19', value: 1314},
+          {name: '05-20', value: 2123},
         ],
         options:{
-          title:'今日品牌销量对比',
-          titleColor:'#fff',
+          title:'今日同昨日销量对比',
           titlePosition:'top',
-          bgColor:'#A4A7B0',
-          radius: 50,
-          innerRadius: 20,
-          legendTop:70,
-          colorList:['#F56C6C','#409EFF']
+          titleColor:'#fff',
+          bgColor:' #A4A7B0',
+          autoWidth:true,
+          fillColor:'#409EFF'
         }
       }
     },
@@ -32,7 +30,7 @@
   }
 </script>
 <style>
-#schart{
+#schart2{
   float: left;
 }
   .schart-wrapper{
