@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e99e9b44-ddc0-40a3-a58e-40653cea9248" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/halo/src/components/page/GoodsManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/halo/src/components/page/GoodsManage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/halo/src/components/page/OrderManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/halo/src/components/page/OrderManage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/halo/src/components/page/UserManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/halo/src/components/page/UserManage.vue" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="GoodsManage.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/halo/src/components/page/GoodsManage.vue">
+      <file leaf-file-name="OrderManage.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/halo/src/components/page/OrderManage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3445">
-              <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+            <state relative-caret-position="351">
+              <caret line="52" column="71" lean-forward="true" selection-end-line="212" />
               <folding>
                 <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -27,14 +30,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="135">
-                <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-              </first_editor>
-              <second_editor />
+      <file leaf-file-name="UserManage.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/halo/src/components/page/UserManage.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+              <folding>
+                <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -59,7 +62,6 @@
         <option value="$PROJECT_DIR$/halo/src/components/common/bus.js" />
         <option value="$PROJECT_DIR$/halo/src/App.vue" />
         <option value="$PROJECT_DIR$/halo/src/components/common/Header.vue" />
-        <option value="$PROJECT_DIR$/halo/src/components/page/OrderManage.vue" />
         <option value="$PROJECT_DIR$/halo/static/css/jq22.css" />
         <option value="$PROJECT_DIR$/halo/src/components/page/404.vue" />
         <option value="$PROJECT_DIR$/halo/src/components/page/child/calendar.vue" />
@@ -76,8 +78,10 @@
         <option value="$PROJECT_DIR$/halo/src/components/page/schart.vue" />
         <option value="$PROJECT_DIR$/halo/src/components/page/schart2.vue" />
         <option value="$PROJECT_DIR$/halo/static/css/main.css" />
-        <option value="$PROJECT_DIR$/halo/src/components/page/GoodsManage.vue" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/halo/src/components/page/GoodsManage.vue" />
+        <option value="$PROJECT_DIR$/halo/src/components/page/OrderManage.vue" />
+        <option value="$PROJECT_DIR$/halo/src/components/page/UserManage.vue" />
       </list>
     </option>
   </component>
@@ -97,8 +101,8 @@
     <handled-path value="$PROJECT_DIR$/halo/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="83" />
-    <option name="y" value="43" />
+    <option name="x" value="200" />
+    <option name="y" value="92" />
     <option name="width" value="1681" />
     <option name="height" value="998" />
   </component>
@@ -115,6 +119,67 @@
             <path>
               <item name="Halo-MS" type="b2602c69:ProjectViewProjectNode" />
               <item name="Halo-MS" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Halo-MS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Halo-MS" type="462c0819:PsiDirectoryNode" />
+              <item name="halo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Halo-MS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Halo-MS" type="462c0819:PsiDirectoryNode" />
+              <item name="halo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Halo-MS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Halo-MS" type="462c0819:PsiDirectoryNode" />
+              <item name="halo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Halo-MS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Halo-MS" type="462c0819:PsiDirectoryNode" />
+              <item name="halo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="common" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Halo-MS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Halo-MS" type="462c0819:PsiDirectoryNode" />
+              <item name="halo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Halo-MS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Halo-MS" type="462c0819:PsiDirectoryNode" />
+              <item name="halo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="router" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Halo-MS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Halo-MS" type="462c0819:PsiDirectoryNode" />
+              <item name="halo" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Halo-MS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Halo-MS" type="462c0819:PsiDirectoryNode" />
+              <item name="halo" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Halo-MS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Halo-MS" type="462c0819:PsiDirectoryNode" />
+              <item name="halo" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -230,7 +295,7 @@
       <workItem from="1525331237140" duration="13846000" />
       <workItem from="1525443594594" duration="51422000" />
       <workItem from="1525661063356" duration="11481000" />
-      <workItem from="1525789456392" duration="56201000" />
+      <workItem from="1525789456392" duration="64865000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1525331373225</created>
@@ -309,11 +374,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526184071118</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary=":alien: Updating code">
+      <created>1526184305350</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1526184305350</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136798000" />
+    <option name="totallyTimeSpent" value="145462000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -325,7 +397,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="83" y="43" width="1681" height="998" extended-state="0" />
+    <frame x="200" y="92" width="1681" height="998" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -610,13 +682,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/halo/static/js/jq22.js" />
     <entry file="file://$PROJECT_DIR$/halo/static/css/jq22.css" />
-    <entry file="file://$PROJECT_DIR$/halo/src/components/page/OrderManage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/halo/src/components/page/404.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
@@ -624,20 +689,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/halo/src/components/page/UserManage.vue">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/halo/src/components/common/Tags.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1080">
           <caret line="40" column="8" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/halo/src/components/common/Sidebar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1404">
-          <caret line="73" column="6" selection-start-line="69" selection-start-column="4" selection-end-line="73" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -697,13 +752,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/halo/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="33" column="1" selection-start-line="33" selection-start-column="1" selection-end-line="33" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/halo/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -748,23 +796,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="162">
+            <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="389">
+          <caret line="24" column="2" selection-start-line="24" selection-start-column="2" selection-end-line="25" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/halo/src/components/page/GoodsManage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3445">
-          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+        <state relative-caret-position="551">
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
           <folding>
             <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/halo/src/components/page/OrderManage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="52" column="71" lean-forward="true" selection-end-line="212" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/src/components/common/Sidebar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="56" column="19" lean-forward="true" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/src/components/page/UserManage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
