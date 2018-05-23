@@ -23,6 +23,7 @@
     font-size: 20px;
     font-weight: 700;
     color: #fff;
+    cursor: pointer;
   }
 </style>
 <script>

@@ -55,7 +55,7 @@
         <el-table-column label="商品名称" prop="name" ></el-table-column>
         <el-table-column label="商品价格" prop="price" ></el-table-column>
         <el-table-column label="商品类别" prop="type" ></el-table-column>
-        <el-table-column label="操作">
+        <el-table-column label="操作" width="200">
           <template slot-scope="scope">
             <el-button size="small" @click="handleEdit(scope.$index,scope.row)">编辑</el-button>
             <el-button size="small" type="danger" @click="handleDel(scope.$index,scope.row)">删除</el-button>
@@ -208,5 +208,19 @@
     margin-right: 0;
     margin-bottom: 0;
     width: 50%;
+  }
+  .container {
+    padding: 30px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  .pagination {
+    margin: 20px 0;
+    text-align: right;
+  }
+  .el-button{
+    width: 80px !important;
+    height: 31px !important;
   }
 </style>

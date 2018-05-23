@@ -10,36 +10,33 @@
     </div>
     <div class="container">
       <div class="order_handleBox">
-        <el-button type="primary" icon="delete" class="handle-del mr10" @click="deleteSelected">批量删除</el-button>
+        <el-button type="primary" icon="delete" class="handle-del mr10" @click="deleteSelected" >批量删除</el-button>
         <el-select v-model="select_cate" placeholder="筛选种类" class="handle-select mr10">
           <el-option key="1" label="手机" value="手机"></el-option>
           <el-option key="2" label="耳机" value="耳机"></el-option>
           <el-option key="3" label="配件" value="配件"></el-option>
         </el-select>
         <el-input v-model="select_word" placeholder="筛选" class="handle-input mr10"></el-input>
-        <el-button type="primary" icon="search">搜索</el-button>
+        <el-button type="primary" icon="search" >搜索</el-button>
       </div>
       <el-table :data="dataTable"  ref="multipleTable"  @selection-change="handleSelectionChange" style="width: 100%" class="elTable">
         <el-table-column type="expand">
           <template slot-scope="props">
             <el-form label-position="left" inline class="order_form">
-              <el-form-item label="订单ID">
+              <el-form-item label="用户ID">
                 <span>{{props.row.id}}</span>
               </el-form-item>
-              <el-form-item label="用户ID">
+              <el-form-item label="用户名">
                 <span>{{props.row.name}}</span>
               </el-form-item>
-              <el-form-item label="订单金额">
+              <el-form-item label="安全等级">
                 <span>{{props.row.description}}</span>
               </el-form-item>
-              <el-form-item label="订单状态">
+              <el-form-item label="绑定邮箱">
                 <span>{{props.row.price}}</span>
               </el-form-item>
-              <el-form-item label="商品总价">
+              <el-form-item label="绑定手机">
                 <span>{{props.row.stock}}</span>
-              </el-form-item>
-              <el-form-item label="购买数量">
-                <span>{{props.row.type}}</span>
               </el-form-item>
               <el-form-item label="创建时间">
                 <span>{{props.row.createtime}}</span>
@@ -51,10 +48,9 @@
           </template>
         </el-table-column>
         <el-table-column type="selection" width="40"></el-table-column>
-        <el-table-column label="订单ID" prop="id" ></el-table-column>
-        <el-table-column label="用户ID" prop="name" ></el-table-column>
-        <el-table-column label="订单金额" prop="price" ></el-table-column>
-        <el-table-column label="订单状态" prop="type" ></el-table-column>
+        <el-table-column label="用户ID" prop="id" ></el-table-column>
+        <el-table-column label="用户名" prop="name" ></el-table-column>
+        <el-table-column label="安全等级" prop="price" ></el-table-column>
         <el-table-column label="操作">
           <template slot-scope="scope">
             <el-button size="small" @click="handleEdit(scope.$index,scope.row)">编辑</el-button>
@@ -71,8 +67,8 @@
     <el-dialog title="提示" width="300px" center :visible.sync="delVisible">
       <div class="del-dialog">删除不可恢复，是否确定删除?</div>
       <span slot="footer" class="dialog-footer">
-        <el-button @click="delVisible=false">取 消</el-button>
-        <el-button type="primary" @click="deleteRow">确 定</el-button>
+        <el-button @click="delVisible=false" size="medium">取 消</el-button>
+        <el-button type="primary" @click="deleteRow" size="medium">确 定</el-button>
       </span>
     </el-dialog>
 
@@ -208,5 +204,9 @@
     margin-right: 0;
     margin-bottom: 0;
     width: 50%;
+  }
+  .el-button{
+    width: 80px !important;
+    height: 31px !important;
   }
 </style>

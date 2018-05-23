@@ -26,20 +26,44 @@
               <el-form-item label="订单ID">
                 <span>{{props.row.id}}</span>
               </el-form-item>
+              <el-form-item label="商品ID">
+                <span></span>
+              </el-form-item>
+              <el-form-item label="商品名称">
+                <span></span>
+              </el-form-item>
               <el-form-item label="用户ID">
                 <span>{{props.row.name}}</span>
               </el-form-item>
-              <el-form-item label="订单金额">
-                <span>{{props.row.description}}</span>
+              <el-form-item label="商品单价">
+                <span></span>
               </el-form-item>
-              <el-form-item label="订单状态">
-                <span>{{props.row.price}}</span>
+              <el-form-item label="购买数量">
+                <span></span>
               </el-form-item>
               <el-form-item label="商品总价">
                 <span>{{props.row.stock}}</span>
               </el-form-item>
-              <el-form-item label="购买数量">
-                <span>{{props.row.type}}</span>
+                <el-form-item label="订单金额">
+                <span>{{props.row.description}}</span>
+              </el-form-item>
+              <el-form-item label="订单状态">
+              <span>{{props.row.price}}</span>
+            </el-form-item>
+              <el-form-item label="配送时间">
+                <span></span>
+              </el-form-item>
+              <el-form-item label="配送方式">
+                <span></span>
+              </el-form-item>
+              <el-form-item label="收货人姓名">
+                <span></span>
+              </el-form-item>
+              <el-form-item label="收货人地址">
+                <span></span>
+              </el-form-item>
+              <el-form-item label="收货人电话">
+                <span></span>
               </el-form-item>
               <el-form-item label="创建时间">
               <span>{{props.row.createtime}}</span>
@@ -53,9 +77,9 @@
         <el-table-column type="selection" width="40"></el-table-column>
         <el-table-column label="订单ID" prop="id" ></el-table-column>
         <el-table-column label="用户ID" prop="name" ></el-table-column>
-        <el-table-column label="订单金额" prop="price" ></el-table-column>
+        <el-table-column label="订单金额" prop="price"  ></el-table-column>
         <el-table-column label="订单状态" prop="type" ></el-table-column>
-        <el-table-column label="操作">
+        <el-table-column label="操作" width="200">
           <template slot-scope="scope">
             <el-button size="small" @click="handleEdit(scope.$index,scope.row)">编辑</el-button>
             <el-button size="small" type="danger" @click="handleDel(scope.$index,scope.row)">删除</el-button>
@@ -208,5 +232,9 @@
     margin-right: 0;
     margin-bottom: 0;
     width: 50%;
+  }
+  .el-button{
+    width: 80px !important;
+    height: 31px !important;
   }
 </style>
