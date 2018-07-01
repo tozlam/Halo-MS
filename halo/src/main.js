@@ -12,7 +12,7 @@ axios.defaults.withCredentials=true;
 Vue.prototype.$rootUrl = '/proxy';
 
 router.beforeEach((to,from,next)=>{
-  const role=localStorage.getItem("ms_userId");
+  const role=sessionStorage.getItem('username',);
   if(!role&&to.path!=='/login'){
     next({ path: '/login' });
   }

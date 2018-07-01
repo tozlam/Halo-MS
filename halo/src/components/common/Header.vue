@@ -25,7 +25,7 @@
 <script>
   export default {
     data: () => ({
-      username: 'header',
+      username: '',
       fullscreen: false,
     }),
     methods: {
@@ -59,10 +59,13 @@
       // 用户名下拉菜单选择事件
       handleCommand(command) {
         if (command == 'loginout') {
-          localStorage.removeItem('ms_userId');
+          sessionStorage.removeItem('username');
           this.$router.push('/login');
         }
       },
+    },
+    created(){
+      this.username=sessionStorage.getItem('username');
     }
 
   }

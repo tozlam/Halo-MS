@@ -10,12 +10,9 @@
       return{
         canvasId:'HaloSchart',
         type:'ring',
-        data:[
-          {name: '魅族', value: 1342},
-          {name: '魅蓝', value: 2123},
-        ],
+        data:[],
         options:{
-          title:'今日品牌销量对比',
+          title:'本月品牌销量对比',
           titleColor:'#fff',
           titlePosition:'top',
           bgColor:'#A4A7B0',
@@ -28,6 +25,25 @@
     },
     components:{
       Schart
+    },
+    methods:{
+      getData(){
+        var url = this.$rootUrl + "/api/halo/backstage/firstpage/";
+        const options = {
+          method: 'GET',
+          url: url,
+          data: {}
+        };
+        this.$axios(options).then((res) => {
+          if (res.data.errorCode == 0) {
+            this.data.push({name:'魅族',value:2})
+            this.data.push({name:'魅蓝',value:6})
+          }
+        })
+      }
+    },
+    created(){
+      this.getData()
     }
   }
 </script>

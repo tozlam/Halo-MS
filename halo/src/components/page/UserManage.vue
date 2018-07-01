@@ -10,56 +10,49 @@
     </div>
     <div class="container">
       <div class="order_handleBox">
-        <el-button type="primary" icon="delete" class="handle-del mr10" @click="deleteSelected" >批量删除</el-button>
-        <el-select v-model="select_cate" placeholder="筛选种类" class="handle-select mr10">
-          <el-option key="1" label="手机" value="手机"></el-option>
-          <el-option key="2" label="耳机" value="耳机"></el-option>
-          <el-option key="3" label="配件" value="配件"></el-option>
-        </el-select>
-        <el-input v-model="select_word" placeholder="筛选" class="handle-input mr10"></el-input>
-        <el-button type="primary" icon="search" >搜索</el-button>
+        <el-input v-model="select_word" placeholder="通过用户id筛选" class="handle-input mr10"></el-input>
+        <el-button type="primary" icon="search" @click="search">搜索</el-button>
       </div>
       <el-table :data="dataTable"  ref="multipleTable"  @selection-change="handleSelectionChange" style="width: 100%" class="elTable">
         <el-table-column type="expand">
           <template slot-scope="props">
             <el-form label-position="left" inline class="order_form">
               <el-form-item label="用户ID">
-                <span>{{props.row.id}}</span>
+                <span>{{props.row.userId}}</span>
               </el-form-item>
               <el-form-item label="用户名">
-                <span>{{props.row.name}}</span>
+                <span>{{props.row.username}}</span>
               </el-form-item>
               <el-form-item label="安全等级">
-                <span>{{props.row.description}}</span>
+                <span>{{props.row.securityLevel}}</span>
               </el-form-item>
               <el-form-item label="绑定邮箱">
-                <span>{{props.row.price}}</span>
+                <span>{{props.row.email}}</span>
               </el-form-item>
               <el-form-item label="绑定手机">
-                <span>{{props.row.stock}}</span>
+                <span>{{props.row.phone}}</span>
               </el-form-item>
               <el-form-item label="创建时间">
-                <span>{{props.row.createtime}}</span>
+                <span>{{GMTToStrCreate}}</span>
               </el-form-item>
               <el-form-item label="最后修改时间">
-                <span>{{props.row.lastupdate}}</span>
+                <span>{{GMTToStrUpdate}}</span>
               </el-form-item>
             </el-form>
           </template>
         </el-table-column>
         <el-table-column type="selection" width="40"></el-table-column>
-        <el-table-column label="用户ID" prop="id" ></el-table-column>
-        <el-table-column label="用户名" prop="name" ></el-table-column>
-        <el-table-column label="安全等级" prop="price" ></el-table-column>
+        <el-table-column label="用户ID" prop="userId" ></el-table-column>
+        <el-table-column label="用户名" prop="username" ></el-table-column>
+        <el-table-column label="安全等级" prop="securityLevel" ></el-table-column>
         <el-table-column label="操作">
           <template slot-scope="scope">
-            <el-button size="small" @click="handleEdit(scope.$index,scope.row)">编辑</el-button>
             <el-button size="small" type="danger" @click="handleDel(scope.$index,scope.row)">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
       <div class="pagination">
-        <el-pagination @current-change="handleCurrentChange" layout="prev, pager, next" :total="1000">
+        <el-pagination @current-change="handleCurrentChange" layout="prev, pager, next" :page-count="pages">
         </el-pagination>
       </div>
     </div>
@@ -72,29 +65,6 @@
       </span>
     </el-dialog>
 
-    <el-dialog title="编辑" :visible.sync="editVisible" width="40%">
-      <el-form ref="form" label-width="40px" :model="form">
-        <el-form-item label="名称">
-          <el-input v-model="form.name"></el-input>
-        </el-form-item>
-        <el-form-item label="描述">
-          <el-input v-model="form.description"></el-input>
-        </el-form-item>
-        <el-form-item label="价格">
-          <el-input v-model="form.price"></el-input>
-        </el-form-item>
-        <el-form-item label="库存">
-          <el-input v-model="form.stock"></el-input>
-        </el-form-item>
-        <el-form-item label="类别">
-          <el-input v-model="form.type"></el-input>
-        </el-form-item>
-      </el-form>
-      <span slot="footer" class="dialog-footer">
-                <el-button @click="editVisible=false">取 消</el-button>
-                <el-button type="primary" @click="saveEdit">确 定</el-button>
-            </span>
-    </el-dialog>
   </div>
 </template>
 
@@ -107,12 +77,7 @@
         select_word: '',
         delVisible: false,
         editVisible: false,
-        dataTable: [
-          {id: "cd001", name: "afasf", description: "ssssssssssssssss", price: "899", stock: "7", type: "手机",createtime:"2017-12-12",lastupdate:"2017-12-31"},
-          {id: "cd520", name: "asda", description: "aaaaaaaaaaaaaa", price: "1599", stock: "4", type: "耳机",createtime:"2017-12-12",lastupdate:"2017-12-31"},
-          {id: "cs530", name: "sadasd", description: "qqqqqqqqqqqq", price: "3299", stock: "0", type: "配件",createtime:"2017-12-12",lastupdate:"2017-12-31"},
-
-        ],
+        dataTable: [],
         form: {
           id: '',
           name: '',
@@ -126,30 +91,57 @@
         idx: -1,
         multipleSelection:[],
         del_list:[],
+        pages: 0
       }
     },
     methods: {
+      search(){
+        var url = this.$rootUrl + "/api/halo/backstage/usermanage/"+this.select_word;
+        const options = {
+          method: 'GET',
+          url: url,
+          data: {}
+        };
+        this.$axios(options).then((res) => {
+          if (res.data.errorCode == 0) {
+            this.dataTable = res.data.data.user
+          }
+        })
+      },
       // 分页导航
       handleCurrentChange(val) {
-        this.cur_page = val;
+        this.currentPage = val;
         this.getData();
       },
-      getData(){
-
+      getPages() {
+        var url = this.$rootUrl + "/api/halo/backstage/usermanage/page?pageCount=10";
+        const options = {
+          method: 'GET',
+          url: url,
+          data: {}
+        };
+        this.$axios(options).then((res) => {
+          if (res.data.errorCode == 0) {
+            this.pages = res.data.data.pages
+          }
+        })
+      },
+      getData() {
+        var url = this.$rootUrl + "/api/halo/backstage/usermanage/users?pageIndex="+this.currentPage+"&pageCount=10";
+        const options = {
+          method: 'GET',
+          url: url,
+          data: {}
+        };
+        this.$axios(options).then((res) => {
+          if (res.data.errorCode == 0) {
+            this.dataTable = res.data.data.users
+          }
+        })
       },
       handleEdit(index, row) {
         this.idx = index;
         const item = this.dataTable[index];
-        this.form = {
-          id: item.id,
-          name: item.name,
-          description: item.description,
-          price: item.price,
-          stock: item.stock,
-          type: item.type,
-          createtime:item.createtime,
-          lastupdate:item.lastupdate
-        }
         this.editVisible = true;
       },
       saveEdit() {
@@ -162,9 +154,20 @@
         this.delVisible = true;
       },
       deleteRow(){
-        this.dataTable.splice(this.idx, 1);
-        this.$message.success('删除成功');
-        this.delVisible = false;
+        var id=this.dataTable[this.idx].userId
+        var url = this.$rootUrl + "/api/halo/backstage/usermanage/"+id;
+        const options = {
+          method: 'DELETE',
+          url: url,
+          data: {}
+        };
+        this.$axios(options).then((res) => {
+          if (res.data.errorCode == 0) {
+            this.delVisible=false;
+            this.$message.success("删除成功");
+            this.getData()
+          }
+        })
       },
       deleteSelected(){
         const length = this.multipleSelection.length;
@@ -179,6 +182,36 @@
       handleSelectionChange(val) {
         this.multipleSelection = val;
       },
+    },
+    created() {
+      this.getPages()
+      this.getData()
+    },
+    computed:{
+      GMTToStrCreate() {
+        for (let i = 0; i < this.dataTable.length; i++) {
+          let date = new Date(this.dataTable[i].gmtCreate)
+          let Str = date.getFullYear() + '-' +
+            (date.getMonth() + 1) + '-' +
+            date.getDate() + ' ' +
+            date.getHours() + ':' +
+            date.getMinutes() + ':' +
+            date.getSeconds()
+          return Str
+        }
+      },
+      GMTToStrUpdate() {
+        for (let i = 0; i < this.dataTable.length; i++) {
+          let date = new Date(this.dataTable[i].gmtUpdate)
+          let Str = date.getFullYear() + '-' +
+            (date.getMonth() + 1) + '-' +
+            date.getDate() + ' ' +
+            date.getHours() + ':' +
+            date.getMinutes() + ':' +
+            date.getSeconds()
+          return Str
+        }
+      }
     }
   }
 </script>

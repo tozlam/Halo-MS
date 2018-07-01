@@ -2,13 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e99e9b44-ddc0-40a3-a58e-40653cea9248" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/halo/static/img/halo_favicon.ico" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/halo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/halo/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/halo/src/components/page/404.vue" beforeDir="false" afterPath="$PROJECT_DIR$/halo/src/components/page/404.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/halo/src/components/common/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/halo/src/components/common/Header.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/halo/src/components/page/DashBoard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/halo/src/components/page/DashBoard.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/halo/src/components/page/GoodsManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/halo/src/components/page/GoodsManage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/halo/src/components/page/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/halo/src/components/page/Login.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/halo/src/components/page/OrderManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/halo/src/components/page/OrderManage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/halo/src/components/page/UserManage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/halo/src/components/page/UserManage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/halo/static/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/halo/static/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/halo/src/components/page/schart.vue" beforeDir="false" afterPath="$PROJECT_DIR$/halo/src/components/page/schart.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/halo/src/components/page/schart2.vue" beforeDir="false" afterPath="$PROJECT_DIR$/halo/src/components/page/schart2.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/halo/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/halo/src/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +28,8 @@
       <file leaf-file-name="OrderManage.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/halo/src/components/page/OrderManage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="681">
-              <caret line="238" column="3" selection-start-line="238" selection-start-column="3" selection-end-line="238" selection-end-column="3" />
+            <state relative-caret-position="1755">
+              <caret line="65" column="94" selection-start-line="65" selection-start-column="94" selection-end-line="65" selection-end-column="94" />
               <folding>
                 <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -32,11 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserManage.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserManage.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/halo/src/components/page/UserManage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1377">
-              <caret line="54" column="38" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="38" />
+            <state relative-caret-position="4131">
+              <caret line="153" column="31" selection-start-line="153" selection-start-column="31" selection-end-line="153" selection-end-column="31" />
               <folding>
                 <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -44,11 +49,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GoodsManage.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Login.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/halo/src/components/page/Login.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+              <folding>
+                <element signature="n#style#0;n#p#0;n#el-form-item#0;n#el-form#0;n#el-container#0;n#el-container#0;n#el-main#0;n#el-container#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GoodsManage.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/halo/src/components/page/GoodsManage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="224" column="3" selection-start-line="224" selection-start-column="3" selection-end-line="224" selection-end-column="3" />
+            <state relative-caret-position="27">
+              <caret line="200" column="68" selection-start-line="200" selection-start-column="68" selection-end-line="200" selection-end-column="68" />
               <folding>
                 <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
               </folding>
@@ -56,41 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/halo/src/main.js">
+      <file leaf-file-name="schart2.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/halo/src/components/page/schart2.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/halo/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/halo/static/css/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="625">
-              <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Home.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/halo/src/components/common/Home.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="756">
-              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-              <folding>
-                <element signature="e#344#377#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="378">
+              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -98,17 +85,44 @@
       <file leaf-file-name="Sidebar.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/halo/src/components/common/Sidebar.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1755">
-              <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+            <state relative-caret-position="1863">
+              <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bus.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/halo/src/components/common/bus.js">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/halo/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+              <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DashBoard.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/halo/src/components/page/DashBoard.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2322">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="schart.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/halo/src/components/page/schart.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/halo/src/router/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="513">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -132,27 +146,27 @@
         <option value="$PROJECT_DIR$/halo/src/components/common/Siderbar.vue" />
         <option value="$PROJECT_DIR$/halo/src/components/common/bus.js" />
         <option value="$PROJECT_DIR$/halo/src/App.vue" />
-        <option value="$PROJECT_DIR$/halo/src/components/common/Header.vue" />
         <option value="$PROJECT_DIR$/halo/static/css/jq22.css" />
         <option value="$PROJECT_DIR$/halo/src/components/page/child/calendar.vue" />
         <option value="$PROJECT_DIR$/halo/src/components/common/Home.vue" />
         <option value="$PROJECT_DIR$/halo/src/components/page/calendar.vue" />
         <option value="$PROJECT_DIR$/halo/src/components/common/Tags.vue" />
-        <option value="$PROJECT_DIR$/halo/src/components/common/Sidebar.vue" />
         <option value="$PROJECT_DIR$/halo/src/router/index.js" />
-        <option value="$PROJECT_DIR$/halo/src/main.js" />
         <option value="$PROJECT_DIR$/halo/webpack.config.js" />
         <option value="$PROJECT_DIR$/halo/package.json" />
-        <option value="$PROJECT_DIR$/halo/src/components/page/Login.vue" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/halo/src/components/page/404.vue" />
+        <option value="$PROJECT_DIR$/halo/static/css/main.css" />
+        <option value="$PROJECT_DIR$/halo/src/components/common/Sidebar.vue" />
+        <option value="$PROJECT_DIR$/halo/src/main.js" />
+        <option value="$PROJECT_DIR$/halo/src/components/common/Header.vue" />
         <option value="$PROJECT_DIR$/halo/src/components/page/DashBoard.vue" />
+        <option value="$PROJECT_DIR$/halo/src/components/page/Login.vue" />
+        <option value="$PROJECT_DIR$/halo/index.html" />
+        <option value="$PROJECT_DIR$/halo/src/components/page/OrderManage.vue" />
+        <option value="$PROJECT_DIR$/halo/src/components/page/UserManage.vue" />
         <option value="$PROJECT_DIR$/halo/src/components/page/schart.vue" />
         <option value="$PROJECT_DIR$/halo/src/components/page/schart2.vue" />
-        <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/halo/index.html" />
-        <option value="$PROJECT_DIR$/halo/src/components/page/404.vue" />
-        <option value="$PROJECT_DIR$/halo/src/components/page/UserManage.vue" />
-        <option value="$PROJECT_DIR$/halo/static/css/main.css" />
-        <option value="$PROJECT_DIR$/halo/src/components/page/OrderManage.vue" />
         <option value="$PROJECT_DIR$/halo/src/components/page/GoodsManage.vue" />
       </list>
     </option>
@@ -172,11 +186,11 @@
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/halo/node_modules" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="85" />
-    <option name="y" value="88" />
-    <option name="width" value="1858" />
-    <option name="height" value="1074" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="124" />
+    <option name="y" value="-19" />
+    <option name="width" value="1615" />
+    <option name="height" value="1090" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -185,6 +199,7 @@
     <panes>
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -250,7 +265,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -262,15 +276,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Halo-MS\halo\src\components\page" />
-      <recent name="F:\Halo-MS\halo\static\img" />
-      <recent name="F:\Halo-MS\halo\static\css" />
-      <recent name="F:\Halo-MS\halo\static\js" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\Halo-MS\halo\src\components\page" />
       <recent name="F:\Halo-MS\halo\src\components\common" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Halo-MS\halo\static\img" />
+      <recent name="F:\Halo-MS\halo\src\components\page" />
+      <recent name="F:\Halo-MS\halo\static\css" />
+      <recent name="F:\Halo-MS\halo\static\js" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -365,7 +379,16 @@
       <workItem from="1526439028403" duration="311000" />
       <workItem from="1526573217135" duration="2947000" />
       <workItem from="1526969861964" duration="1197000" />
-      <workItem from="1526995902672" duration="11816000" />
+      <workItem from="1526995902672" duration="12458000" />
+      <workItem from="1527131281586" duration="6355000" />
+      <workItem from="1527388711994" duration="589000" />
+      <workItem from="1528291527632" duration="8533000" />
+      <workItem from="1529224485763" duration="1467000" />
+      <workItem from="1529481297588" duration="619000" />
+      <workItem from="1529500498983" duration="59000" />
+      <workItem from="1529690780464" duration="5625000" />
+      <workItem from="1529905231735" duration="30819000" />
+      <workItem from="1530443601853" duration="598000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1525331373225</created>
@@ -458,11 +481,18 @@
       <option name="project" value="LOCAL" />
       <updated>1526204386837</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary=":bug: Fixing a bug.">
+      <created>1527089432592</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1527089432592</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="168237000" />
+    <option name="totallyTimeSpent" value="223543000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -474,8 +504,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="109" y="193" width="1858" height="1074" extended-state="1" />
-    <editor active="true" />
+    <frame x="1" y="1" width="1918" height="1078" extended-state="6" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32928178" />
@@ -487,10 +516,10 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.18586089" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.38654503" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22429378" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17923497" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -500,7 +529,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.3295325" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -521,9 +550,17 @@
     <MESSAGE value="calender" />
     <MESSAGE value=":lipstick: Updating the UI and style files." />
     <MESSAGE value=":alien: Updating code" />
-    <option name="LAST_COMMIT_MESSAGE" value=":alien: Updating code" />
+    <MESSAGE value=":bug: Fixing a bug." />
+    <option name="LAST_COMMIT_MESSAGE" value=":bug: Fixing a bug." />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/halo/src/components/common/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/halo/src/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -577,10 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1917">
           <caret line="71" column="77" selection-start-line="71" selection-start-column="77" selection-end-line="71" selection-end-column="77" />
-          <folding>
-            <element signature="n#style#0;n#li#5;n#ul#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#6;n#ul#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -710,45 +743,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/halo/dist/build.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/halo/static/js/jq22.js" />
     <entry file="file://$PROJECT_DIR$/halo/static/css/jq22.css" />
-    <entry file="file://$PROJECT_DIR$/halo/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="8" column="75" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/halo/src/components/page/Login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="64" column="25" lean-forward="true" selection-start-line="64" selection-start-column="25" selection-end-line="64" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/halo/src/components/page/schart.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/halo/src/components/page/schart2.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -766,42 +762,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/halo/webpack.config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="82" column="22" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/halo/src/components/page/DashBoard.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2160">
-          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/halo/src/components/page/calendar.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3591">
           <caret line="133" column="31" selection-start-line="133" selection-start-column="24" selection-end-line="133" selection-end-column="31" />
-          <folding>
-            <element signature="n#style#0;n#li#5;n#ul#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#li#6;n#ul#0;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/halo/src/components/common/Tags.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1108">
-          <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/halo/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -812,34 +776,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/halo/src/components/common/Header.vue">
+    <entry file="file://$PROJECT_DIR$/halo/static/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="59" column="6" selection-start-line="59" selection-start-column="6" selection-end-line="64" selection-end-column="8" />
+        <state relative-caret-position="864">
+          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/halo/src/components/common/Sidebar.vue">
+    <entry file="file://$PROJECT_DIR$/halo/src/components/common/Tags.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1755">
-          <caret line="65" column="37" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/halo/src/components/common/Home.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-          <folding>
-            <element signature="e#344#377#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/halo/src/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        <state relative-caret-position="815">
+          <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -850,34 +797,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/halo/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1728">
+          <caret line="64" column="8" selection-start-line="64" selection-start-column="8" selection-end-line="64" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="8" column="75" selection-start-line="8" selection-start-column="75" selection-end-line="8" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/src/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/src/components/common/Home.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="729">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/src/components/common/Header.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1083">
+          <caret line="63" column="9" lean-forward="true" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/src/components/common/Sidebar.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1863">
+          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/src/components/page/DashBoard.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2322">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/src/components/page/Login.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#el-form-item#0;n#el-form#0;n#el-container#0;n#el-container#0;n#el-main#0;n#el-container#0;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/halo/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="10" column="7" lean-forward="true" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/halo/static/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="625">
-          <caret line="32" column="31" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/halo/src/components/page/GoodsManage.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="224" column="3" selection-start-line="224" selection-start-column="3" selection-end-line="224" selection-end-column="3" />
-          <folding>
-            <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="135">
+          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/halo/src/components/page/OrderManage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="238" column="3" selection-start-line="238" selection-start-column="3" selection-end-line="238" selection-end-column="3" />
+        <state relative-caret-position="1755">
+          <caret line="65" column="94" selection-start-line="65" selection-start-column="94" selection-end-line="65" selection-end-column="94" />
           <folding>
             <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>
@@ -886,8 +882,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/halo/src/components/page/UserManage.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1377">
-          <caret line="54" column="38" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="38" />
+        <state relative-caret-position="4131">
+          <caret line="153" column="31" selection-start-line="153" selection-start-column="31" selection-end-line="153" selection-end-column="31" />
+          <folding>
+            <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/src/components/page/schart.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="25" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/src/components/page/schart2.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/halo/src/components/page/GoodsManage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="200" column="68" selection-start-line="200" selection-start-column="68" selection-end-line="200" selection-end-column="68" />
           <folding>
             <element signature="n#style#0;n#el-table#0;n#div#1;n#div#0;n#template#0;n#!!top" expanded="true" />
           </folding>

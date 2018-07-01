@@ -10,14 +10,14 @@
     </div>
     <div class="container">
       <div class="order_handleBox">
-        <el-button type="primary" icon="delete" class="handle-del mr10" @click="deleteSelected">批量删除</el-button>
-        <el-select v-model="select_cate" placeholder="筛选种类" class="handle-select mr10">
-          <el-option key="1" label="手机" value="手机"></el-option>
-          <el-option key="2" label="耳机" value="耳机"></el-option>
-          <el-option key="3" label="配件" value="配件"></el-option>
+        <el-select v-model="select_cate" placeholder="筛选种类" class="handle-select mr10" @change="selectChange">
+          <el-option key="1" label="未付款" value="0"></el-option>
+          <el-option key="2" label="已付款" value="1"></el-option>
+          <el-option key="3" label="未发货" value="2"></el-option>
+          <el-option key="3" label="已发货" value="3"></el-option>
+          <el-option key="3" label="交易成功" value="4"></el-option>
+          <el-option key="3" label="交易关闭" value="5"></el-option>
         </el-select>
-        <el-input v-model="select_word" placeholder="筛选" class="handle-input mr10"></el-input>
-        <el-button type="primary" icon="search">搜索</el-button>
       </div>
       <el-table :data="dataTable"  ref="multipleTable"  @selection-change="handleSelectionChange" style="width: 100%" class="elTable">
         <el-table-column type="expand">
@@ -27,67 +27,48 @@
                 <span>{{props.row.id}}</span>
               </el-form-item>
               <el-form-item label="商品ID">
-                <span></span>
+                <p v-for="item in props.row.products">{{item.proId}}</p>
               </el-form-item>
               <el-form-item label="商品名称">
-                <span></span>
+                <p v-for="item in props.row.products">{{item.title}}</p>
               </el-form-item>
               <el-form-item label="用户ID">
-                <span>{{props.row.name}}</span>
+                <span>{{props.row.uid}}</span>
               </el-form-item>
               <el-form-item label="商品单价">
-                <span></span>
+                <p v-for="item in props.row.products">{{item.price}}</p>
               </el-form-item>
               <el-form-item label="购买数量">
-                <span></span>
+                <p v-for="item in props.row.products">{{item.number}}</p>
               </el-form-item>
               <el-form-item label="商品总价">
-                <span>{{props.row.stock}}</span>
+                <p v-for="item in props.row.products">{{item.total}}</p>
               </el-form-item>
                 <el-form-item label="订单金额">
-                <span>{{props.row.description}}</span>
+                <span>{{props.row.price}}</span>
               </el-form-item>
               <el-form-item label="订单状态">
-              <span>{{props.row.price}}</span>
+              <span>{{orderStatus}}</span>
             </el-form-item>
-              <el-form-item label="配送时间">
-                <span></span>
-              </el-form-item>
-              <el-form-item label="配送方式">
-                <span></span>
-              </el-form-item>
-              <el-form-item label="收货人姓名">
-                <span></span>
-              </el-form-item>
-              <el-form-item label="收货人地址">
-                <span></span>
-              </el-form-item>
-              <el-form-item label="收货人电话">
-                <span></span>
-              </el-form-item>
               <el-form-item label="创建时间">
-              <span>{{props.row.createtime}}</span>
+              <span>{{GMTToStr}}</span>
             </el-form-item>
-              <el-form-item label="最后修改时间">
-                <span>{{props.row.lastupdate}}</span>
-              </el-form-item>
             </el-form>
           </template>
         </el-table-column>
         <el-table-column type="selection" width="40"></el-table-column>
         <el-table-column label="订单ID" prop="id" ></el-table-column>
-        <el-table-column label="用户ID" prop="name" ></el-table-column>
+        <el-table-column label="用户ID" prop="uid" ></el-table-column>
         <el-table-column label="订单金额" prop="price"  ></el-table-column>
-        <el-table-column label="订单状态" prop="type" ></el-table-column>
+        <el-table-column label="订单状态" prop="status"></el-table-column>
         <el-table-column label="操作" width="200">
           <template slot-scope="scope">
             <el-button size="small" @click="handleEdit(scope.$index,scope.row)">编辑</el-button>
-            <el-button size="small" type="danger" @click="handleDel(scope.$index,scope.row)">删除</el-button>
           </template>
         </el-table-column>
       </el-table>
       <div class="pagination">
-        <el-pagination @current-change="handleCurrentChange" layout="prev, pager, next" :total="1000">
+        <el-pagination @current-change="handleCurrentChange" layout="prev, pager, next"  :page-count="pages">
         </el-pagination>
       </div>
     </div>
@@ -102,20 +83,8 @@
 
     <el-dialog title="编辑" :visible.sync="editVisible" width="40%">
       <el-form ref="form" label-width="40px" :model="form">
-        <el-form-item label="名称">
-          <el-input v-model="form.name"></el-input>
-        </el-form-item>
-        <el-form-item label="描述">
-          <el-input v-model="form.description"></el-input>
-        </el-form-item>
-        <el-form-item label="价格">
-          <el-input v-model="form.price"></el-input>
-        </el-form-item>
-        <el-form-item label="库存">
-          <el-input v-model="form.stock"></el-input>
-        </el-form-item>
-        <el-form-item label="类别">
-          <el-input v-model="form.type"></el-input>
+        <el-form-item label="状态">
+          <el-input v-model="form.status"></el-input>
         </el-form-item>
       </el-form>
       <span slot="footer" class="dialog-footer">
@@ -135,55 +104,71 @@
         select_word: '',
         delVisible: false,
         editVisible: false,
-        dataTable: [
-          {id: "cd001", name: "afasf", description: "ssssssssssssssss", price: "899", stock: "7", type: "手机",createtime:"2017-12-12",lastupdate:"2017-12-31"},
-          {id: "cd520", name: "asda", description: "aaaaaaaaaaaaaa", price: "1599", stock: "4", type: "耳机",createtime:"2017-12-12",lastupdate:"2017-12-31"},
-          {id: "cs530", name: "sadasd", description: "qqqqqqqqqqqq", price: "3299", stock: "0", type: "配件",createtime:"2017-12-12",lastupdate:"2017-12-31"},
-
-        ],
+        dataTable: [],
         form: {
-          id: '',
-          name: '',
-          description: '',
-          price: '',
-          stock: '',
-          type: '',
-          createtime:'',
-          lastupdate:''
+         status:""
         },
         idx: -1,
         multipleSelection:[],
         del_list:[],
+        pages:0
       }
     },
     methods: {
       // 分页导航
       handleCurrentChange(val) {
-        this.cur_page = val;
+        this.currentPage = val;
         this.getData();
+      },
+      getPages(){
+        var url = this.$rootUrl + "/api/halo/backstage/ordermanage/page?pageCount=10";
+        const options = {
+          method: 'GET',
+          url: url,
+          data: {}
+        };
+        this.$axios(options).then((res) => {
+          if (res.data.errorCode == 0) {
+            this.pages=res.data.data.pages
+          }
+        })
       },
       getData(){
 
+        var url = this.$rootUrl + "/api/halo/backstage/ordermanage/orders?pageIndex="+this.currentPage+"&pageCount=10";
+        const options = {
+          method: 'GET',
+          url: url,
+          data: {}
+        };
+        this.$axios(options).then((res) => {
+          if (res.data.errorCode == 0) {
+            this.dataTable=res.data.data.orders
+          }
+        })
       },
       handleEdit(index, row) {
         this.idx = index;
-        const item = this.dataTable[index];
-        this.form = {
-          id: item.id,
-          name: item.name,
-          description: item.description,
-          price: item.price,
-          stock: item.stock,
-          type: item.type,
-          createtime:item.createtime,
-          lastupdate:item.lastupdate
-        }
         this.editVisible = true;
       },
-      saveEdit() {
-        this.$set(this.dataTable, this.idx, this.form);
-        this.editVisible = false;
-        this.$message.success("修改"+this.form.id+"成功");
+      saveEdit(index) {
+        let up={
+          "id":this.dataTable[this.idx],
+          "status":this.form.status
+        }
+        var url = this.$rootUrl + "/api/halo/backstage/ordermanage/status";
+        const options = {
+          method: 'PATCH',
+          url: url,
+          data: up
+        };
+        this.$axios(options).then((res) => {
+          if (res.data.errorCode == 0) {
+            this.editVisible = false;
+            this.$message.success("修改成功");
+            this.getData()
+          }
+        })
       },
       handleDel(index,row){
         this.idx = index;
@@ -207,6 +192,50 @@
       handleSelectionChange(val) {
         this.multipleSelection = val;
       },
+      selectChange(){
+        var url = this.$rootUrl + "/api/halo/backstage/ordermanage/"+this.select_cate+"?pageIndex=1&pageCount=5";
+        const options = {
+          method: 'GET',
+          url: url,
+          data: {}
+        };
+        this.$axios(options).then((res) => {
+          if (res.data.errorCode == 0) {
+            this.dataTable=res.data.data.orders
+          }
+        })
+      }
+    },
+    created(){
+      this.getPages()
+      this.getData()
+    },
+    computed: {
+      orderStatus(){
+        for(let i=0;i<this.dataTable.length;i++){
+          switch (this.dataTable[i].status){
+            case 0:return "未付款";break;
+            case 1:return "已付款";break;
+            case 2:return "未发货";break;
+            case 3:return "已发货";break;
+            case 4:return "交易成功";break;
+            case 5:return "交易关闭";break;
+          }
+        }
+
+      },
+      GMTToStr() {
+        for (let i = 0; i < this.dataTable.length; i++) {
+          let date = new Date(this.dataTable[i].gmtUpdated)
+          let Str = date.getFullYear() + '-' +
+            (date.getMonth() + 1) + '-' +
+            date.getDate() + ' ' +
+            date.getHours() + ':' +
+            date.getMinutes() + ':' +
+            date.getSeconds()
+          return Str
+        }
+      }
     }
   }
 </script>

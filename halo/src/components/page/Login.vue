@@ -8,13 +8,13 @@
           </el-header>
           <el-container id="login_container_main">
             <el-form :model="loginForm" :rules="rules" ref="loginForm">
-              <el-form-item prop="userId">
-                <el-input v-model="loginForm.userId" placeholder="Halo. 员工ID"></el-input>
+              <el-form-item prop="username">
+                <el-input v-model="loginForm.username" placeholder="Halo. 员工ID" @change="vp"></el-input>
+                <p style="color:#e22841;font-size: 12px">{{errormsg}}</p>
               </el-form-item>
               <el-form-item prop="password">
-                <el-input placeholder="密码" type="password" v-model="loginForm.password" @keyup.enter.native="submitForm('loginForm')"></el-input>
+                <el-input placeholder="密码" type="password" v-model="loginForm.password" @keyup.enter.native="submitForm()"></el-input>
               </el-form-item>
-              <el-checkbox>记住密码</el-checkbox>
               <el-form-item>
                 <el-button type="primary" @click="submitForm('loginForm')">登录</el-button>
               </el-form-item>
@@ -27,11 +27,12 @@
   </div>
 </template>
 <script>
+  import qs from 'qs';
   export default {
     data: function () {
       return {
         loginForm: {
-          userId: "",
+          username: "",
           password: ""
         },
         rules: {
@@ -45,24 +46,40 @@
       };
     },
     methods: {
-      submitForm(form) {
-        this.$refs[form].validate((valid) => {
-          if (valid) {
-              // this.$axios.get(this.$rootUrl+"/message/list",{}).
-              // then((res)=>{
-              //   if(res.data[0].content==='demo'){
-                  localStorage.setItem('ms_userId',this.loginForm.userId);
-                  this.$router.push({path: '/'});
-            //     }else {
-            //       console.log('error json!!');
-            //       return false;
-            //     }
-            // } )
-            //
-
-          } else {
-            console.log('error submit!!');
-            return false;
+      vp() {
+        var url = this.$rootUrl + "/api/halo/backstage/admins/verityUsername/"+this.loginForm.username;
+        const options = {
+          method: 'GET',
+          url: url,
+          data: {}
+        };
+        this.$axios(options).then((res) => {
+          if (res.data.data) {
+            if (res.data.errorCode == 0) {
+            }
+            else {
+              this.errormsg=res.data.msg;
+            }
+          }
+        })
+      },
+      submitForm(){
+        var url = this.$rootUrl + "/api/halo/backstage/admins/loginByPwd";
+        const options = {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded'},
+          url: url,
+          data: qs.stringify(this.loginForm)
+        };
+        this.$axios(options).then((res) => {
+          if (res.data.data) {
+            if (res.data.errorCode == 0) {
+              sessionStorage.setItem('username',res.data.data.username)
+              this.$router.push({path: '/', });
+            }
+            else {
+              this.errormsg=res.data.msg;
+            }
           }
         })
       }

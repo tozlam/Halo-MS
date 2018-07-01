@@ -11,8 +11,8 @@
         canvasId:'Schart',
         type:'bar',
         data:[
-          {name: '05-19', value: 1314},
-          {name: '05-20', value: 2123},
+          {name: '06-26', value: 2},
+          {name: '06-27', value: 1},
         ],
         options:{
           title:'今日同昨日销量对比',

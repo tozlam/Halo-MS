@@ -9,7 +9,7 @@
           <el-card shadow="hover">
             <i class="el-icon-sold-out" @click="goRouter('ordermanage')"></i>
             <div class="card-info" @click="goRouter('ordermanage')">
-              <p>{{totalOrder}}</p>
+              <p>{{msg.totalOrder}}</p>
               <p>总订单数</p>
             </div>
 
@@ -19,7 +19,7 @@
           <el-card shadow="hover" :class="alertCard(this.pendingOrder)?'cardInfo-danger':'el-card'">
             <i class="el-icon-bell" @click="goRouter('ordermanage')"></i>
             <div class="card-info" @click="goRouter('ordermanage')">
-              <p>{{pendingOrder}}</p>
+              <p>{{msg.noHandledOrder}}</p>
               <p>待处理订单</p>
             </div>
 
@@ -29,7 +29,7 @@
           <el-card shadow="hover" :class="alertCard(this.unstockedGoods)?'cardInfo-warning':'el-card'">
             <i class="el-icon-circle-close-outline" @click="goRouter('goodsmanage')"></i>
             <div class="card-info" @click="goRouter('goodsmanage')">
-              <p>{{unstockedGoods}}</p>
+              <p>{{msg.zeroStock}}</p>
               <p>无库存商品</p>
             </div>
 
@@ -39,7 +39,7 @@
           <el-card shadow="hover" :class="alertCard(this.dealTotalMoney)?'cardInfo-success':'el-card'">
             <i class="el-icon-tickets" @click="goRouter('ordermanage')"></i>
             <div class="card-info" @click="goRouter('ordermanage')">
-              <p>{{dealTotalMoney}}</p>
+              <p>{{msg.totalTurnover}}</p>
               <p>成交总额</p>
             </div>
 
@@ -48,7 +48,7 @@
       </el-row>
     </div>
     <div class="schartCard clear">
-      <v-schart></v-schart>
+      <v-schart ></v-schart>
       <v-schart2></v-schart2>
     </div>
 
@@ -60,12 +60,11 @@
   import vSchart2 from './schart2';
 
   export default {
-    data: () => ({
-      totalOrder: 1,
-      pendingOrder: 1,
-      unstockedGoods: 1,
-      dealTotalMoney: 1,
-    }),
+   data(){
+     return{
+     msg:{}
+     }
+   },
     components: {
       vCalender, vSchart2, vSchart
     },
@@ -78,15 +77,36 @@
       },
       goRouter(that) {
         this.$router.push({path: "/" + that});
+      },
+      getData() {
+        var url = this.$rootUrl + "/api/halo/backstage/firstpage/";
+
+        const options = {
+          method: 'GET',
+          url: url,
+          data: {}
+        };
+
+        this.$axios(options).then((res) => {
+          if (res.data.errorCode == 0) {
+            this.msg = res.data.data.info
+            if(res.data.data.info.totalTurnover==null){
+              this.msg.totalTurnover=0
+            }
+          }
+        })
       }
     },
-    computed: {}
+    created() {
+      this.getData()
+    }
   }
 </script>
 <style>
-  .dashboard{
+  .dashboard {
     overflow: hidden;
   }
+
   .clear::after {
     content: "";
     height: 0;
